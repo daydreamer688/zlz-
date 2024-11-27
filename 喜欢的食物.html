@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美食</title>
+   
+    <body style="background-color: #f5e8ae;"></body>
+    <style>
+        body {
+            display: flex;
+            justify-content: center; /* 水平居中 */
+            align-items: center;     /* 垂直居中 */
+            height: 100vh;          /* 使视口高度为100% */
+            margin: 0;              /* 去掉默认的边距 */
+            background-color: #f4f4f4; /* 背景颜色 */
+        }
+
+        .slider {
+            display: flex;
+            width: 80%;              /* 轮播图宽度 */
+            max-width: 600px;       /* 最大宽度 */
+            overflow: hidden;       /* 隐藏溢出 */
+            position: relative;     /* 为了定位导航按钮 */
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease; /* 平滑过渡 */
+        }
+
+        .slide {
+            min-width: 100%;        /* 每个幻灯片宽度100% */
+        }
+
+        img {
+            width: 100%;           /* 图片自适应宽度 */
+            display: block;        /* 防止底部有空隙 */
+        }
+
+        .nav {
+            position: absolute;     /* 定位导航按钮 */
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.7);
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .prev {
+            left: 10px; /* 左侧按钮位置 */
+        }
+
+        .next {
+            right: 10px; /* 右侧按钮位置 */
+        }
+    </style>
+</head>
+<body>
+
+<div class="slider">
+    <div class="slides">
+        <div class="slide"><img src="img\IMG_20241024_123255.jpg" alt="图片1"></div>
+        <div class="slide"><img src="img\IMG_20240927_181827.jpg" alt="图片2"></div>
+        <div class="slide"><img src="img\IMG_20240912_120640.jpg" alt="图片3"></div>
+    </div>
+    <button class="nav prev">❮</button>
+    <button class="nav next">❯</button>
+</div>
+
+<script>
+    let currentIndex = 0;
+    const slides = document.querySelector('.slides');
+    const totalSlides = document.querySelectorAll('.slide').length;
+
+    function showSlide(index) {
+        currentIndex = (index + totalSlides) % totalSlides; // 确保索引在范围内
+        slides.style.transform = `translateX(${-currentIndex * 100}%)`; // 移动幻灯片
+    }
+
+    document.querySelector('.next').onclick = function() {
+        showSlide(currentIndex + 1); // 显示下一张
+    }
+
+    document.querySelector('.prev').onclick = function() {
+        showSlide(currentIndex - 1); // 显示上一张
+    }
+
+    // 自动播放功能
+    setInterval(() => {
+        showSlide(currentIndex + 1); // 每3秒自动切换到下一张
+    }, 2000);
+</script>
+
+
+
+</body>
+</html>
+
+   

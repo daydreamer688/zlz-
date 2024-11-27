@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>校园美景介绍</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fcdddd;
+        }
+        
+        header {
+            background-color: #fda397;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 2rem;
+        }
+
+        h1 {
+            margin-bottom: 0.5rem;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .image-card {
+            flex: 1 1 calc(30% - 20px);
+            margin: 10px;
+            border: 2px solid #f4dea6;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s;
+        }
+
+        .image-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .image-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        .image-description {
+            padding: 1rem;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #f4dea6;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>校园美景介绍</h1>
+    <p>探索我们的校园，并欣赏它的自然之美!</p>
+</header>
+
+<div class="container">
+    <h2>美丽的校园景点</h2>
+    <div class="gallery">
+        <div class="image-card">
+            <img src="img\Videoframe_20241121_201835_com.huawei.himovie.local.jpg" alt="校园景点1">
+            <div class="image-description">
+                <h3>图书馆</h3>
+                <p>我们的图书馆不仅藏书丰富，还拥有令人放松的环境。</p>
+            </div>
+        </div>
+        <div class="image-card">
+            <img src="img\IMG_20241025_090513.jpg" alt="校园景点2">
+            <div class="image-description">
+                <h3>操场</h3>
+                <p>操场是学生们活动和互动的好去处。</p>
+            </div>
+        </div>
+        <div class="image-card">
+            <img src="img\IMG_20241113_174553.jpg" alt="校园景点3">
+            <div class="image-description">
+                <h3>东九楼</h3>
+                <p>东九楼的晚霞</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>光阴且含笑，年华渐结香</p>
+    
+</footer>
+
+</body>
+</html>
