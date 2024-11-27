@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Document</title>
+
+<!-- 我们先进行样式初始化 -->
+
+<style>
+
+*{
+
+margin: 0;
+
+padding: 0;
+
+text-decoration: none;
+
+list-style: none;
+
+}
+
+.main{
+
+max-width: 1400px;/* 让整个网页只有800宽 */
+
+margin: auto;/* 让它水平居中 */
+
+}
+
+.header,.nav,.container,.footer{
+
+/* 这四个盒子都要左浮动 */
+
+float: left;
+
+/* 让它们满浏览器 */
+
+width: 100%;
+
+/* 内边距会影响整个盒子的实际大小，这里有一种方法可以处理，让它不影响 */
+
+box-sizing: border-box;/* 就是这句 */
+
+}
+
+.header{
+
+background: #fbd416;
+
+padding: 20px;
+
+text-align: center;
+
+}
+
+.nav{
+
+background: #333;
+
+}
+
+.nav a{
+
+color: #fca794;
+
+padding: 10px 20px;
+
+display: inline-block;/* 让链接以块的形式显示 */
+
+}
+
+.nav a:hover{
+
+background: #f6f207;
+
+color: #000;
+
+}
+
+/* 我们让左右两边都固定宽度200 */
+
+.lside{
+
+width: 200px;
+
+float: left;
+
+}
+
+.rside{
+
+width: 300px;
+
+float: right;
+
+}
+
+/* 所以中间栏要加左右边距 */
+
+.content{
+
+margin: 0px 205px;
+
+}
+
+.lside,.rside,.content{
+
+padding: 5px;
+
+box-sizing: border-box;/* 去掉内边距影响 */
+
+}
+
+.footer{
+
+padding: 10px;
+
+background: #fca794;
+
+text-align: center;
+
+}
+
+/* 最后加个功能，当浏览宽度小于700时，三个栏进行竖排 */
+
+@media screen and (max-width:700px) {
+
+.lside,.rside,.content{
+
+width: 100%;
+
+margin: 0px;
+
+}
+
+}
+
+</style>
+
+</head>
+<body style="background-color: #fca794;" ></body>
+<body>
+
+<div class="main">
+
+<div class="header">
+
+<h1>小小的我</h1>
+
+<p>My Home</p>
+
+</div>
+
+<div class="nav">
+
+<a href="喜欢的食物.html">喜欢的食物</a>
+
+<a href="我的家乡.html">我的家乡</a>
+
+<a href="校园美景.html">校园美景</a>
+
+<a href="喜欢的电影.html">喜欢的电影</a>
+
+<a href=" https://flyjumpbow.github.io/609/">我的寝室</a>
+
+</div>
+
+<div class="container">
+
+<!-- 主体这里我们要放入三个盒子，分别是左中右,要注意的是我们用margin进行三栏布局
+
+           中间的栏是自适应的，所以中间的栏放在第三个。
+
+           -->
+
+<div class="lside">
+
+<h2>一首小诗</h2>
+
+<p>生如夏花
+    诗丨泰戈尔 译丨郑振铎
+    <P>我听见回声，来自山谷和心间</P>
+    <p>以寂寞的镰刀收割空旷的灵魂</p>
+    <p>不断地重复决绝，又重复幸福</p>
+    <p>终有绿洲摇曳在沙漠</p>
+    <p>我相信自己</p>
+    <p>生来如同璀璨的夏日之花</p>
+    <p>不凋不败，妖冶如火</p>
+    <p>承受心跳的负荷和呼吸的累赘</p>
+    <p>乐此不疲</p>
+    
+    <p>我听见音乐，来自月光和胴体</p>
+    <p>辅极端的诱饵捕获飘渺的唯美</p>
+    <p>一生充盈着激烈，又充盈着纯然</p>
+    <p>总有回忆贯穿于世间</p>
+    <p>我相信自己</p>   
+    <p>死时如同静美的秋日落叶</p>
+    <p>不盛不乱，姿态如烟</p>
+    <p>即便枯萎也保留丰肌清骨的傲然</p>
+    <p>玄之又玄</p>
+    
+    <p>我听见爱情，我相信爱情</p>
+    <p>如同一阵凄微的风</p>
+    <p>穿过我失血的静脉</p>
+    <p>驻守岁月的信念</p>
+    <p>我相信一切能够听见</p>
+    <p>甚至预见离散，遇见另一个自己</p>
+    <p>而有些瞬间无法把握</p>
+    <p>任凭东走西顾，逝去的必然不返</p>
+    <p>请看我头置簪花，一路走来一路盛开</p>
+    <p>频频遗漏一些，又深陷风霜雨雪的感动</p>
+    
+    <p>般若波罗蜜，一声一声</p>
+    <p>生如夏花之绚烂，死如秋叶之静美</p>
+    <p>还在乎拥有什么</p>
+
+
+
+
+
+</p>
+
+</div>
+
+<div class="rside">
+
+<h2 style="text-align:center;">收获好运吧(๑•̀ㅂ•́)و✧</h2>
+
+<p>
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <meta charset="utf-8">
+    <title>测试实例</title>
+    <script>
+    function myFunction()
+    {
+        alert("祝你一天好心情！(≧∇≦)/");
+    }
+    </script>
+    </head>
+     
+    <body>
+    <button onclick="myFunction()">点我</button>
+    </body>
+    </html>
+
+</p>
+<p>
+    <image src="img\acc1491d942133ba10e08d557186f353.jpeg" alt="柿子"width="250" height="700"></image>
+</p>
+
+</div>
+
+<div class="content">
+
+
+
+
+<h2 style="text-align:center;">快乐的甜品烘焙时光(´∀`)</h2>
+
+<p>
+
+    <image src="img\IMG_20240702_171004.jpg" alt="云"width="400" height="300"></image>
+    <image src="img\IMG_20240702_171209.jpg" alt="云"width="400" height="300"></image>
+    <image src="img\IMG_20240719_132511.jpg" alt="云"width="400" height="300"></image>
+    <image src="img\IMG_20240719_132647.jpg" alt="云"width="400" height="300"></image>
+    <image src="img\IMG_20240722_211128.jpg" alt="云"width="800" height="500"></image>
+    
+
+</p> 
+
+</div>
+
+</div>
+
+<div class="footer">
+
+
+</div>
+
+</div>
+
+</body>
+
+
+
+</html>
